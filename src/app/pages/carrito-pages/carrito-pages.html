@@ -1,0 +1,29 @@
+<table class="table table-dark table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>NOMBRE</th>
+            <th>CIUDAD</th>
+            <th>PRECIO</th>
+            <th>ACCIONES</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @for(carrito of carritoArray; track carrito){
+        <tr>
+            <td>{{carrito.id}}</td>
+            <td>{{carrito.nombre}}</td>
+            <td>{{carrito.ciudad}}</td>
+            <td>{{carrito.precio}}</td>
+              <td>
+
+               <button type="button" (click)="eliminar(carrito.id)" class="btn btn-danger">Eliminar</button>
+              <a [routerLink]="['/detalles', carrito.id]"><button type="button" class="btn btn-success">Detalles</button></a> 
+
+
+              </td>
+        </tr>
+    }
+    </tbody>
+</table>

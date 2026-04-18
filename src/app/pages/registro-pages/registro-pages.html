@@ -1,0 +1,22 @@
+<form (ngSubmit)="registro(formulario)" #formulario="ngForm">
+
+    <div class="mb-3 mt-3">
+        <label  class="form-label">Nombre:</label>
+        <input type="text" class="form-control" placeholder="Nombre" name="nombre" [(ngModel)]="nombre">
+    </div>
+    <div class="mb-3 mt-3">
+        <label  class="form-label">Apellido:</label>
+        <input type="text" class="form-control" placeholder="Apellido" name="apellido" [(ngModel)]="apellido">
+    </div>
+    <div class="mb-3 mt-3">
+        <label for="email" class="form-label">Correo:</label>
+        <input type="email" class="form-control" placeholder="Enter email" name="correo" [(ngModel)]="correo">
+    </div>
+    <div class="mb-3">
+        <label for="pwd" class="form-label">Contraseña:</label>
+        <input type="password" class="form-control" placeholder="Enter password" name="contrasena"
+            [(ngModel)]="contrasena">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Guardar Datos</button>
+</form>

@@ -1,0 +1,17 @@
+@if(!acceso){
+
+<form (ngSubmit)="login(formulario)" #formulario="ngForm">
+  <div class="mb-3 mt-3">
+    <label for="email" class="form-label">Correo:</label>
+    <input type="email" class="form-control" placeholder="Enter email" name="correo" [(ngModel)]="correo">
+  </div>
+  <div class="mb-3">
+    <label for="pwd" class="form-label">Contrasena:</label>
+    <input type="password" class="form-control" placeholder="Enter password" name="contrasena" [(ngModel)]="contrasena">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+</form>
+}@else{
+<button type="submit" (click)="logout()" class="btn btn-primary">Cerrar Sesion</button>
+}

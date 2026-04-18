@@ -1,0 +1,21 @@
+
+
+<form (ngSubmit)="editar(form)" #form="ngForm">
+
+     
+    <input type="text" name="parametro" [(ngModel)]=parametro > <br>
+  
+
+    Nombre
+    <input type="text" name="nombre" [(ngModel)]= producto.nombre > <br>
+    Ciudad:
+    <input type="text" name="ciudad" [(ngModel)]= producto.proveedor.ubicacion.ciudad > <br>
+
+    precio:
+    <input type="text" name="precio" [(ngModel)]= producto.info.precio> <br>
+
+    <input type="submit" value="editar">
+
+</form>
+
+
